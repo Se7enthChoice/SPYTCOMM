@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <title>SPYTCOMM popup</title>
+</head>
+<body>
+  <div class="popup-container">
+    <div class="popup-title">SPYTCOMM</div>
+
+    <div class="option">
+      <label class="switch">
+        <input type="checkbox" id="toggleExtension" checked>
+        <span class="slider round"></span>
+      </label>
+      <span id="toggleExtensionText">Toggle Extension</span>
+    </div>
+
+    <div class="option">
+      <label for="sortComments">Sort Comments:</label>
+      <select id="sortComments">
+        <option value="likeCount">By Like Count</option>
+        <option value="mostRecent">By Most Recent</option>
+      </select>
+    </div>
+
+    <div class="option">
+      <label for="intervalInput">Comment Display Interval:</label>
+      <div class="interval-container">
+        <input type="number" id="intervalInput" min="1" max="15" value="8">
+      </div>
+    </div>
+
+    <div class="option">
+      <label for="retrieveMethod">Retrieve Video By:</label>
+      <select id="retrieveMethod">
+        <option value="relevance">Relevance</option>
+        <option value="viewCount">View Count</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Spotify YouTube Comments",
+    "version": "1.0",
+    "description": "Display YouTube comments for the currently playing Spotify song.",
+    "permissions": ["activeTab","storage"],
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "action": {
+      "default_title": "Spotify YouTube Comments",
+      "default_popup": "src/popup/popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.spotify.com/*"],
+        "js": ["src/frontend/content.js"],
+        "css": ["src/frontend/styles.css"]
+      }
+    ]
+  }
+  
